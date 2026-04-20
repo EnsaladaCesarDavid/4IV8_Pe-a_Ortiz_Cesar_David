@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentaje de Hombres y Mujeres</title>
+    <link rel="stylesheet" href="./CSS/05CSS.css">
+    <script src="./JS/05JS.js"></script>
+</head>
+<body>
+
+<div class="card">
+    <h3>Distribución del Grupo</h3>
+    
+    <label for="numHombres">Cantidad de Hombres:</label>
+    <input type="number" id="numHombres" placeholder="Ingrese una cantidad" min="0">
+
+    <label for="numMujeres">Cantidad de Mujeres:</label>
+    <input type="number" id="numMujeres" placeholder="Ingrese una cantidad" min="0">
+    
+    <button onclick="calcularPorcentajes()">Calcular Porcentajes</button>
+
+    <div class="result" id="resultado"></div>
+</div>
+</body>
+</html>

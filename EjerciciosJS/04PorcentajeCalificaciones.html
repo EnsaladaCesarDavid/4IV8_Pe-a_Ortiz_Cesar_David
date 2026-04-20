@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porcentaje por Calificaciones</title>
+    <link rel="stylesheet" href="./CSS/04CSS.css" />
+    <script src="./JS/04JS.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <h3>Obtener calificación final</h3>
+
+      <div class="section">
+        <label>Calificaciones Parciales (55%):</label>
+        <input
+          type="number"
+          class="parcial"
+          placeholder="Parcial 1"
+          min="0"
+          max="10"
+          step="0.1"
+        />
+        <input
+          type="number"
+          class="parcial"
+          placeholder="Parcial 2"
+          min="0"
+          max="10"
+          step="0.1"
+        />
+        <input
+          type="number"
+          class="parcial"
+          placeholder="Parcial 3"
+          min="0"
+          max="10"
+          step="0.1"
+        />
+      </div>
+
+      <div class="section">
+        <label for="examenFinal">Examen Final (30%):</label>
+        <input
+          type="number"
+          id="examenFinal"
+          placeholder="Calificación Examen"
+          min="0"
+          max="10"
+          step="0.1"
+        />
+      </div>
+
+      <div class="section">
+        <label for="trabajoFinal">Trabajo Final (15%):</label>
+        <input
+          type="number"
+          id="trabajoFinal"
+          placeholder="Calificación Trabajo"
+          min="0"
+          max="10"
+          step="0.1"
+        />
+      </div>
+
+      <button onclick="calcularCalificacion()">Obtener Promedio Final</button>
+
+      <div class="result" id="resultado"></div>
+    </div>
+  </body>
+</html>
