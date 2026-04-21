@@ -32,4 +32,34 @@ function validar(formulario){
         formulario.nombre.focus();
         return false;
     }
+
+    var campoEdad = document.getElementById('edad');
+    if (campoEdad.value.trim() === "") {
+        alert("Por favor ingrese su edad");
+        campoEdad.focus();
+        return false; 
+    }
+
+    if (parseInt(campoEdad.value) <= 0) {
+        alert("Por favor ingrese una edad válida");
+        campoEdad.focus();
+        return false;
+    }
+
+    var campoEmail = document.getElementById('email');
+    var emailValue = campoEmail.value;
+
+    var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regexEmail.test(emailValue)) {
+        alert("La dirección de email no es válida.");
+        
+        campoEmail.classList.add('input-error');
+        campoEmail.focus();
+        
+        return false;
+    }
+
+    campoEmail.classList.remove('input-error');
+    return true;
 }
